@@ -1,0 +1,48 @@
+{
+  "name": "reclaim-sophon-sdk",
+  "version": "1.0.0",
+  "description": "Reclaim contracts on Sophon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reclaimprotocol/reclaim-sophon-sdk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reclaimprotocol/reclaim-sophon-sdk/issues"
+  },
+  "homepage": "https://github.com/reclaimprotocol/reclaim-sophon-sdk#readme",
+  "devDependencies": {
+    "@matterlabs/hardhat-zksync": "^1.4.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
+    "@typechain/ethers-v5": "^10.2.1",
+    "@typechain/hardhat": "^6.1.6",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.4.1",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.17.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.5",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "^5.3.3",
+    "zksync-ethers": "^6.16.1"
+  },
+  "dependencies": {
+    "@erc725/erc725.js": "^0.27.1",
+    "@lukso/lsp-smart-contracts": "^0.15.0",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@openzeppelin/contracts": "^4.9.2",
+    "@openzeppelin/hardhat-upgrades": "^1.28.0",
+    "@reclaimprotocol/crypto-sdk": "^1.4.0",
+    "dotenv": "^16.4.5"
+  }
+}
