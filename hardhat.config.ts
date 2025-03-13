@@ -3,7 +3,7 @@ dotenv.config()
 
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
-import "@matterlabs/hardhat-zksync";
+// import "@matterlabs/hardhat-zksync";
 
 import './tasks'
 
