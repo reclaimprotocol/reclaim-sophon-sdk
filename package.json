@@ -4,7 +4,9 @@
   "description": "Reclaim contracts on Sophon",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "hardhat compile",
+    "deploy": "hardhat deploy --network sophonTestnet"
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,7 @@
     "@types/chai": "^4.3.11",
     "@types/mocha": "^10.0.6",
     "chai": "^4.4.1",
-    "ethers": "^5.7.2",
+    "ethers": "^6.13.5",
     "hardhat": "^2.17.0",
     "hardhat-gas-reporter": "^1.0.9",
     "solidity-coverage": "^0.8.5",

@@ -1,5 +1,4 @@
 import { task, types } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
 import { Reclaim } from "../src/types";
 
 task("add-new-epoch", "Start a new epoch")
@@ -14,9 +13,7 @@ task("add-new-epoch", "Start a new epoch")
 
     const witness: Reclaim.WitnessStruct = { addr: address, host };
     const signerAddress = await ethers.provider.getSigner().getAddress();
-    console.log(
-      `adding witness on "${network.name}" from address "${signerAddress}"`
-    );
+    console.log(`adding witness on "${network.name}" from address "${signerAddress}"`);
 
     const contractAddress = "0xB68aCB36334311CEc471EE2541173EDc155FdA71"; //Replace with your Contract address
     const factory = await ethers.getContractFactory("Reclaim");
@@ -29,8 +26,6 @@ task("add-new-epoch", "Start a new epoch")
     const currentEpoch = await contract.fetchEpoch(0);
 
     console.log(`current epoch: ${currentEpoch.id}`);
-    console.log(
-      `epoch witnesses: ${currentEpoch.witnesses.map((w) => w.addr).join(", ")}`
-    );
+    console.log(`epoch witnesses: ${currentEpoch.witnesses.map((w) => w.addr).join(", ")}`);
     console.log(`epoch start: ${new Date(currentEpoch.timestampStart * 1000)}`);
   });
