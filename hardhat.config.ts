@@ -1,11 +1,10 @@
-import dotenv from 'dotenv'
-dotenv.config()
+import dotenv from "dotenv";
+dotenv.config();
 
 import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
-// import "@matterlabs/hardhat-zksync";
+import "@matterlabs/hardhat-zksync";
 
-import './tasks'
+import "./tasks";
 
 const config: HardhatUserConfig = {
   solidity: "0.8.24",
@@ -20,7 +19,7 @@ const config: HardhatUserConfig = {
       browserVerifyURL: "https://explorer.sophon.xyz/",
       enableVerifyURL: true,
       zksync: true,
-      accounts: [process.env.WALLET_PRIVATE_KEY as string]
+      accounts: [process.env.WALLET_PRIVATE_KEY as string],
     },
     sophonTestnet: {
       url: "https://rpc.testnet.sophon.xyz",
@@ -29,12 +28,12 @@ const config: HardhatUserConfig = {
       browserVerifyURL: "https://explorer.testnet.sophon.xyz/",
       enableVerifyURL: true,
       zksync: true,
-      accounts: [process.env.WALLET_PRIVATE_KEY as string]
+      accounts: [process.env.WALLET_PRIVATE_KEY as string],
     },
-  },zksolc: {
+  },
+  zksolc: {
     version: "latest",
-    settings: {
-    },
+    settings: {},
   },
   etherscan: {
     apiKey: {
@@ -48,17 +47,18 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://api-testnet.sophscan.xyz/api",
           browserURL: "https://testnet.sophscan.xyz",
-        },},
-        {
-          network: "sophonMainnet",
-          chainId: 50104,
-          urls: {
-            apiURL: "https://api.sophscan.xyz/api",
-            browserURL: "https://sophscan.xyz",
-          },
         },
-      ],
-    }
+      },
+      {
+        network: "sophonMainnet",
+        chainId: 50104,
+        urls: {
+          apiURL: "https://api.sophscan.xyz/api",
+          browserURL: "https://sophscan.xyz",
+        },
+      },
+    ],
+  },
 };
 
 export default config;
