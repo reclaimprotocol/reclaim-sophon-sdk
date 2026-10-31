@@ -36,7 +36,7 @@
     "zksync-ethers": "^6.16.1"
   },
   "dependencies": {
-    "@erc725/erc725.js": "^0.27.1",
+    "@erc725/erc725.js": "^0.28.2",
     "@lukso/lsp-smart-contracts": "^0.15.0",
     "@openzeppelin/contracts": "^4.9.2",
     "@openzeppelin/hardhat-upgrades": "^3.9.0",
